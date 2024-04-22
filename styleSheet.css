@@ -1,34 +1,28 @@
-/* Primary color setup */
-
 :root {
     --primary-color: #350456;
     /* Light purple primary color with hex */
 }
 
-
-/* Font for whole page */
-
-html,
-body {
+* {
     font-family: 'Quicksand', sans-serif;
     /* Quicksand font from Google with fallback to sans-serif */
 }
-
-
-/* Background */
 
 body {
     background-color: hsl(269, 53%, 93%);
     /* Light purple background with hsl */
 }
 
-
-/* Wider-gamut color */
-
 li {
     color: rgb(97, 49, 161);
-    font-size: 13px;
     /* Dark purple text with rgb color space */
+    font-size: 13px;
+    /* Absolute font size */
+}
+
+ul,
+li {
+    text-align: left;
 }
 
 p {
@@ -38,6 +32,8 @@ p {
     /* Text decoration */
     text-align: justify;
     /* Text alignment */
+    font-size: 13px;
+    /* Absolute font size */
 }
 
 h1 {
@@ -52,13 +48,15 @@ h2 {
 
 h3 {
     font-size: 20px;
-    /* Absolute font size, unique absolute units */
+    /* Absolute font size */
     color: blueviolet;
 }
 
 a {
     color: blueviolet;
     /* Color of links */
+    font-size: 1.5rem;
+    /* Relative font size */
 }
 
 .box {
@@ -95,16 +93,10 @@ a {
     /* Min width */
 }
 
-
-/* Position */
-
 #meeting-info {
     position: relative;
     /* Relative position */
 }
-
-
-/* Pseudo-class */
 
 a:hover {
     color: rgb(65, 17, 93);
@@ -132,4 +124,97 @@ nav {
         height: auto;
         /* Adjust height based on screen size */
     }
+}
+
+form {
+    color: indigo;
+    font-size: 1rem;
+    /* Relative font size */
+}
+
+.flex-container {
+    display: flex;
+    /* Flexbox layout */
+    justify-content: space-between;
+    /* Justify content */
+    align-items: center;
+    /* Align items */
+}
+
+.flex-item {
+    flex: 1;
+    /* Flex grow */
+    margin: 10px;
+    /* Margin */
+}
+
+#agenda,
+#minutes,
+#media,
+#form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1px;
+    /* Adjust grid */
+}
+
+@media screen and (max-width: 768px) {
+    #agenda,
+    #minutes,
+    #media,
+    #form {
+        grid-template-columns: 1fr;
+    }
+    /* Adjust grid */
+}
+
+.box[attribute="value"] {
+    border-color: #47046b;
+    /* Change border color */
+}
+
+#meeting-info>* {
+    margin-bottom: 10px;
+    /* Margin */
+}
+
+h2+p {
+    font-style: italic;
+    /* Italicize adjacent sibling p */
+}
+
+.flex-container>.flex-item {
+    background-color: #f0f0f0;
+    /* Change background color of flex items */
+}
+
+ul li:has(a) {
+    font-weight: bold;
+    /* Bold list item links */
+}
+
+#agenda h2 {
+    color: #690080;
+    /* Change color of h2 in #agenda */
+}
+
+#agenda #minutes {
+    background-color: #e7c0f7;
+    /* Change background color of #minutes in #agenda */
+}
+
+#agenda h2,
+#minutes h2 {
+    text-transform: uppercase;
+    /* Uppercase h2 in #agenda and #minutes sections */
+}
+
+.box~.box {
+    padding: 1px;
+    /* Padding for sibling .box elements */
+}
+
+ul.flex-container {
+    background-color: #f9f1fd;
+    /* Light purple background color */
 }
