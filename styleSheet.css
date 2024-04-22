@@ -1,0 +1,135 @@
+/* Primary color setup */
+
+:root {
+    --primary-color: #350456;
+    /* Light purple primary color with hex */
+}
+
+
+/* Font for whole page */
+
+html,
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* Quicksand font from Google with fallback to sans-serif */
+}
+
+
+/* Background */
+
+body {
+    background-color: hsl(269, 53%, 93%);
+    /* Light purple background with hsl */
+}
+
+
+/* Wider-gamut color */
+
+li {
+    color: rgb(97, 49, 161);
+    font-size: 13px;
+    /* Dark purple text with rgb color space */
+}
+
+p {
+    color: var(--primary-color);
+    /* CSS variable */
+    text-decoration: underline;
+    /* Text decoration */
+    text-align: justify;
+    /* Text alignment */
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* Relative font size */
+    color: indigo;
+}
+
+h3 {
+    font-size: 20px;
+    /* Absolute font size, unique absolute units */
+    color: blueviolet;
+}
+
+a {
+    color: blueviolet;
+    /* Color of links */
+}
+
+.box {
+    background: linear-gradient( 105deg, rgba(255, 255, 255, 0.2) 39%, rgb(180, 104, 227) 96%) center center / 100% 100% no-repeat, #f9f1fd;
+    margin: 20px;
+    /* Margin */
+    padding: 5px;
+    /* Padding */
+    border-style: solid;
+    /* Border style */
+    border-color: #7003b9;
+    /* Border color */
+    border-width: 1px;
+    /* Border width */
+    border-radius: 2px;
+    /* Border radius */
+    width: 100%;
+    /* Fill entire width of page with gradient box */
+}
+
+#meeting-info {
+    display: block;
+    /* Block display */
+}
+
+#meeting-info {
+    height: 235px;
+    /* Height */
+    width: 80%;
+    /* Width */
+    max-width: 1000px;
+    /* Max width */
+    min-width: 200px;
+    /* Min width */
+}
+
+
+/* Position */
+
+#meeting-info {
+    position: relative;
+    /* Relative position */
+}
+
+
+/* Pseudo-class */
+
+a:hover {
+    color: rgb(65, 17, 93);
+    /* Change link color when hovering with mouse */
+}
+
+nav {
+    display: flex;
+    /* Flexbox layout */
+    justify-content: space-between;
+    /* Justify content */
+}
+
+.main {
+    display: grid;
+    /* Grid layout */
+    grid-template-columns: 1fr 1fr;
+    /* Grid template columns */
+    grid-gap: 20px;
+    /* Grid gap */
+}
+
+@media screen and (max-width: 768px) {
+    #meeting-info {
+        height: auto;
+        /* Adjust height based on screen size */
+    }
+}
