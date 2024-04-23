@@ -2,7 +2,8 @@
 
 **Type of meeting**: online/hybrid/in-person \
 **Location**: Place if in person / N/A if online \
-**Date & Time**:
+**Date & Time**:  
+**Meeting Length**:  
 
 ## Attendance
 
