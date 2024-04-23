@@ -154,9 +154,10 @@ form {
 #media,
 #form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1px;
-    /* Adjust grid */
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    /* maximum of 2 columns */
+    grid-gap: 20px;
+    /* Grid with columns */
 }
 
 @media screen and (max-width: 768px) {
@@ -219,4 +220,60 @@ ul li:has(a) {
 ul.flex-container {
     background-color: #f9f1fd;
     /* Light purple background color */
+}
+
+#minutes h2 {
+    text-align: center;
+    /* Center-align headers in #minutes */
+}
+
+#media h2 {
+    text-align: center;
+    /* Center-align headers in #media */
+}
+
+#minutes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align */
+}
+
+#media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align */
+}
+
+#minutes p,
+#minutes li,
+#media p,
+#media li {
+    text-align: center;
+    /* Center-align */
+}
+
+#minutes h3,
+#media h3 {
+    text-align: left;
+    /* Left-align sub-headers */
+}
+
+#minutes p:not(h3),
+#minutes li:not(h3),
+#media p:not(h3),
+#media li:not(h3) {
+    margin-left: auto;
+    /* Move body info to the right */
+    margin-right: auto;
+    /* Move body info to the left */
+}
+
+#media p,
+#media li {
+    text-align: right;
+    /* Right-align body info in #media */
+    margin-left: auto;
+    /* Move body info to the right */
 }
