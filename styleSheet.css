@@ -41,6 +41,7 @@ h1 {
 }
 
 h2 {
+    display: inline-block;
     font-size: 1.5rem;
     /* Relative font size */
     color: indigo;
@@ -78,7 +79,7 @@ a {
 }
 
 #meeting-info {
-    display: block;
+    display: none;
     /* Block display */
 }
 
@@ -194,6 +195,7 @@ ul li:has(a) {
 }
 
 #agenda h2 {
+    position: static;
     color: #690080;
     /* Change color of h2 in #agenda */
 }
